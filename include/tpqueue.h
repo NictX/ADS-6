@@ -31,6 +31,7 @@ class TPQueue {
     return arr[--i];
     } else {
     throw "";
+    }
   }
 };
 
