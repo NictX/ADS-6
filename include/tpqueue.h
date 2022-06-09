@@ -10,29 +10,29 @@ struct SYM {
 template<typename T, int size>
 class TPQueue {
  private:
-   struct SYM arr[size];
-   int i = 0;
+    struct SYM arr[size];
+    int i = 0;
  public:
-   void push(SYM item) {
-     if (i < size) {
-       ++i;
-       for (int x = i - 1; x >= 0; x--) {
-         if (x && (item.prior <= arr[x - 1].prior)) {
-           arr[x] = arr[x - 1];
-         } else {
-           arr[x] = item;
-           break;
-         }
+    void push(SYM item) {
+       if (i < size) {
+          ++i;
+          for (int x = i - 1; x >= 0; x--) {
+             if (x && (item.prior <= arr[x - 1].prior)) {
+                arr[x] = arr[x - 1];
+             } else {
+                arr[x] = item;
+                break;
+             }
+          }
        }
-     }
    }
    SYM pop() {
-     if (i > 0) {
-       return arr[--i];
-     } else {
-       throw "";
+      if (i > 0) {
+         return arr[--i];
+      } else {
+         throw "";
+      }
    }
-  }
 };
 
 
