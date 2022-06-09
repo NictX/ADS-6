@@ -25,14 +25,14 @@ class TPQueue {
              }
           }
        }
-   }
-   SYM pop() {
-      if (i > 0) {
-         return arr[--i];
-      } else {
-         throw "";
-      }
-   }
+    }
+    SYM pop() {
+       if (i > 0) {
+          return arr[--i];
+       } else {
+          throw "";
+       }
+    }
 };
 
 
