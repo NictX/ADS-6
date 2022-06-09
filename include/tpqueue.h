@@ -11,7 +11,7 @@ class TPQueue {
   void push(SYM item) {
     if (i < size) {
       ++i;
-      for (int x = i - 1; x >= 0; j--) {
+      for (int x = i - 1; x >= 0; x--) {
         if (x && (item.prior <= arr[x - 1].prior)) {
           arr[x] = arr[x - 1];
         } else {
