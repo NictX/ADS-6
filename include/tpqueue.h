@@ -12,6 +12,7 @@ class TPQueue {
  private:
     struct SYM arr[size];
     int i = 0;
+
  public:
     void push(SYM item) {
        if (i < size) {
